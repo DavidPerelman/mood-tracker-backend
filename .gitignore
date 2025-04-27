@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+
+# Conda environments
+*.conda
+*.yml
+
+# VSCode / IDE
+.vscode/
+.idea/
+
+# MacOS files
+.DS_Store
+
+
+PROGRESS.md
