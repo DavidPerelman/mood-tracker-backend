@@ -1,15 +1,11 @@
 # main.py
 
 from fastapi import FastAPI
-from models import MoodEntry
+from api.mood import router as mood_router
+from api.emotions import router as emotions_router
 
 app = FastAPI()
 
-@app.get("/health")
-def health_check():
-    return {"status": "ok"}
-
-# הוספת MoodEntry
-@app.post("/mood")
-def create_mood_entry(mood_entry: MoodEntry):
-    return {"message": "Mood entry created!", "data": mood_entry}
+# חיבור ה-endpoints
+app.include_router(mood_router)
+app.include_router(emotions_router)

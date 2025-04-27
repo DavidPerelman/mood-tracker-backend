@@ -6,7 +6,7 @@ __pycache__/
 
 # Conda environments
 *.conda
-*.yml
+# *.yml
 
 # VSCode / IDE
 .vscode/
